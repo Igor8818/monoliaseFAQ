@@ -2,7 +2,9 @@ import { useCallback, useEffect, useState } from 'react';
 import { GlobalSearchModal } from './components/GlobalSearchModal';
 import { AppShell } from './components/layout/AppShell';
 import { AppStateProvider, useAppState } from './context/AppStateContext';
+import { AboutDiseaseScreen } from './screens/AboutDiseaseScreen';
 import { HomeScreen } from './screens/HomeScreen';
+import { RecognizeScreen } from './screens/RecognizeScreen';
 import { WelcomeScreen } from './screens/WelcomeScreen';
 import type { AppRoute, SearchResultItem } from './types/guide';
 
@@ -33,16 +35,24 @@ function AppContent() {
 
   const [searchOpen, setSearchOpen] = useState(false);
   const [selectedFaqId, setSelectedFaqId] = useState<string | undefined>(undefined);
+  const [selectedSymptomId, setSelectedSymptomId] = useState<string | undefined>(undefined);
   const [calculatorOpen, setCalculatorOpen] = useState(false);
   const [contactsOpen, setContactsOpen] = useState(false);
 
   const navigate = useCallback(
-    (nextRoute: AppRoute, options?: { faqId?: string }) => {
+    (nextRoute: AppRoute, options?: { faqId?: string; symptomId?: string }) => {
       if (options?.faqId) {
         setSelectedFaqId(options.faqId);
       } else if (nextRoute !== 'faq') {
         setSelectedFaqId(undefined);
       }
+
+      if (options?.symptomId) {
+        setSelectedSymptomId(options.symptomId);
+      } else if (nextRoute !== 'recognize') {
+        setSelectedSymptomId(undefined);
+      }
+
       setRoute(nextRoute);
       window.location.hash = `#/${nextRoute}`;
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -62,6 +72,10 @@ function AppContent() {
   const handleSearchSelect = (item: SearchResultItem) => {
     if (item.targetRoute === 'faq' && item.targetId) {
       navigate('faq', { faqId: item.targetId });
+      return;
+    }
+    if (item.targetRoute === 'recognize' && item.targetId) {
+      navigate('recognize', { symptomId: item.targetId });
       return;
     }
     navigate(item.targetRoute);
@@ -95,7 +109,21 @@ function AppContent() {
           />
         )}
 
-        {route !== 'home' && (
+        {route === 'recognize' && (
+          <RecognizeScreen
+            onBack={() => navigate('home')}
+            initialSymptomId={selectedSymptomId}
+          />
+        )}
+
+        {route === 'about' && (
+          <AboutDiseaseScreen
+            onBack={() => navigate('home')}
+            onGoToRecognize={() => navigate('recognize')}
+          />
+        )}
+
+        {route !== 'home' && route !== 'recognize' && route !== 'about' && (
           <div className="p-6">
             <button
               type="button"
@@ -106,7 +134,7 @@ function AppContent() {
             </button>
             <div className="bg-white rounded-2xl border border-borderSoft p-6 shadow-card">
               <p className="font-bold text-slate-900">
-                Rota ativa: {route} {selectedFaqId ? `(${selectedFaqId})` : ''}
+                Rota em preparação: {route} {selectedFaqId ? `(${selectedFaqId})` : ''}
               </p>
             </div>
           </div>
