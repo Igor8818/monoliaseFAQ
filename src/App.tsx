@@ -1,9 +1,14 @@
 import { useCallback, useEffect, useState } from 'react';
+import { DilutionCalculatorModal } from './components/DilutionCalculatorModal';
 import { GlobalSearchModal } from './components/GlobalSearchModal';
 import { AppShell } from './components/layout/AppShell';
 import { AppStateProvider, useAppState } from './context/AppStateContext';
 import { AboutDiseaseScreen } from './screens/AboutDiseaseScreen';
+import { BiosecurityScreen } from './screens/BiosecurityScreen';
+import { FaqScreen } from './screens/FaqScreen';
+import { FavoritesScreen } from './screens/FavoritesScreen';
 import { HomeScreen } from './screens/HomeScreen';
+import { PreventScreen } from './screens/PreventScreen';
 import { RecognizeScreen } from './screens/RecognizeScreen';
 import { WelcomeScreen } from './screens/WelcomeScreen';
 import type { AppRoute, SearchResultItem } from './types/guide';
@@ -116,6 +121,31 @@ function AppContent() {
           />
         )}
 
+        {route === 'prevent' && (
+          <PreventScreen
+            onBack={() => navigate('home')}
+            onOpenCalculator={() => setCalculatorOpen(true)}
+          />
+        )}
+
+        {route === 'biosecurity' && (
+          <BiosecurityScreen
+            onBack={() => navigate('home')}
+            onOpenCalculator={() => setCalculatorOpen(true)}
+          />
+        )}
+
+        {route === 'faq' && (
+          <FaqScreen
+            onBack={() => navigate('home')}
+            initialOpenFaqId={selectedFaqId}
+          />
+        )}
+
+        {route === 'favorites' && (
+          <FavoritesScreen onBack={() => navigate('home')} onNavigate={navigate} />
+        )}
+
         {route === 'about' && (
           <AboutDiseaseScreen
             onBack={() => navigate('home')}
@@ -123,7 +153,7 @@ function AppContent() {
           />
         )}
 
-        {route !== 'home' && route !== 'recognize' && route !== 'about' && (
+        {route === 'suspect' && (
           <div className="p-6">
             <button
               type="button"
@@ -134,7 +164,7 @@ function AppContent() {
             </button>
             <div className="bg-white rounded-2xl border border-borderSoft p-6 shadow-card">
               <p className="font-bold text-slate-900">
-                Rota em preparação: {route} {selectedFaqId ? `(${selectedFaqId})` : ''}
+                Wizard Fruto Suspeito (1/6–6/6) — próximo passo
               </p>
             </div>
           </div>
@@ -147,18 +177,18 @@ function AppContent() {
         onSelectResult={handleSearchSelect}
       />
 
-      {(calculatorOpen || contactsOpen) && (
+      <DilutionCalculatorModal
+        open={calculatorOpen}
+        onClose={() => setCalculatorOpen(false)}
+      />
+
+      {contactsOpen && (
         <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl p-6 max-w-md w-full space-y-3">
-            <p className="font-bold text-slate-900">
-              {calculatorOpen ? 'Calculadora Sanitária' : 'Contatos Oficiais'}
-            </p>
+            <p className="font-bold text-slate-900">Contatos Oficiais (Etapa 6)</p>
             <button
               type="button"
-              onClick={() => {
-                setCalculatorOpen(false);
-                setContactsOpen(false);
-              }}
+              onClick={() => setContactsOpen(false)}
               className="px-4 py-2 rounded-xl bg-forest-primary text-white text-sm font-semibold"
             >
               Fechar
