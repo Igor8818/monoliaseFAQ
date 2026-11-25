@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1A3921" />
+      <stop offset="100%" stop-color="#0E2012" />
+    </linearGradient>
+    <linearGradient id="podBase6" x1="280" y1="120" x2="520" y2="510" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#76AE3D" />
+      <stop offset="50%" stop-color="#537A29" />
+      <stop offset="100%" stop-color="#2D4616" />
+    </linearGradient>
+    <radialGradient id="yellowHalo" cx="0.5" cy="0.5" r="0.55">
+      <stop offset="0%" stop-color="#FACC15" stop-opacity="0.92" />
+      <stop offset="80%" stop-color="#EAB308" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#65A30D" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="darkUnder" cx="0.5" cy="0.5" r="0.55">
+      <stop offset="0%" stop-color="#3E2013" />
+      <stop offset="82%" stop-color="#572E1B" />
+      <stop offset="100%" stop-color="#6E3B22" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="whitePowder" cx="0.45" cy="0.45" r="0.55">
+      <stop offset="0%" stop-color="#FFFDF7" />
+      <stop offset="62%" stop-color="#F3EDE0" />
+      <stop offset="90%" stop-color="#E5DAC5" stop-opacity="0.92" />
+      <stop offset="100%" stop-color="#D6C7AD" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg6)" />
+  <ellipse cx="660" cy="140" rx="165" ry="60" transform="rotate(-16 660 140)" fill="#2F6638" opacity="0.45" />
+  <ellipse cx="140" cy="460" rx="175" ry="68" transform="rotate(20 140 460)" fill="#295932" opacity="0.45" />
+
+  <!-- Branch -->
+  <path d="M180 62C340 82 500 84 650 62" stroke="#473123" stroke-width="24" stroke-linecap="round" />
+  <path d="M402 80V134" stroke="#536E2C" stroke-width="11" stroke-linecap="round" />
+
+  <!-- Cacao Pod -->
+  <path d="M402 128C320 132 270 226 278 344C286 450 338 522 402 534C466 522 520 448 526 340C532 224 484 132 402 128Z" fill="url(#podBase6)" />
+
+  <!-- Yellowish transition halo around advanced lesion -->
+  <ellipse cx="394" cy="348" rx="124" ry="140" fill="url(#yellowHalo)" />
+  <!-- Underlying dark brown necrosis -->
+  <ellipse cx="394" cy="348" rx="108" ry="122" fill="url(#darkUnder)" />
+
+  <!-- Dense white-to-cream powdery spore layer (massa pulverulenta tipo talco) -->
+  <path d="M322 276C358 232 434 238 468 290C496 332 486 410 442 442C396 474 328 454 306 400C288 356 296 308 322 276Z" fill="url(#whitePowder)" />
+  <ellipse cx="392" cy="344" rx="74" ry="86" fill="url(#whitePowder)" />
+
+  <!-- Powdery spore texture specks and tiny airborne spore particles -->
+  <g fill="#FFFDF9" opacity="0.72">
+    <circle cx="348" cy="312" r="3" />
+    <circle cx="378" cy="296" r="4" />
+    <circle cx="422" cy="318" r="3.5" />
+    <circle cx="364" cy="368" r="4" />
+    <circle cx="410" cy="382" r="3.5" />
+    <circle cx="442" cy="346" r="3" />
+    <circle cx="332" cy="348" r="2.5" />
+    <!-- Subtle floating spore dust outside -->
+    <circle cx="534" cy="310" r="2.2" opacity="0.5" />
+    <circle cx="556" cy="328" r="1.8" opacity="0.45" />
+    <circle cx="542" cy="356" r="2" opacity="0.4" />
+  </g>
+</svg>

@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'icons/*.png', 'images/symptoms/*.jpg'],
+      includeAssets: ['favicon.svg', 'icons/*.png', 'images/symptoms/*.svg'],
       manifest: {
         name: 'Monilíase em Alerta',
         short_name: 'Monilíase',

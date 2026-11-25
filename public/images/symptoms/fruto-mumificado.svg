@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg7" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1D2B20" />
+      <stop offset="100%" stop-color="#0E1710" />
+    </linearGradient>
+    <linearGradient id="trunk7" x1="150" y1="0" x2="360" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#36261C" />
+      <stop offset="50%" stop-color="#533B2C" />
+      <stop offset="100%" stop-color="#271A12" />
+    </linearGradient>
+    <linearGradient id="mummyBody" x1="390" y1="180" x2="540" y2="490" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B2E2A" />
+      <stop offset="50%" stop-color="#241B18" />
+      <stop offset="100%" stop-color="#120D0B" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg7)" />
+  <ellipse cx="640" cy="130" rx="165" ry="60" transform="rotate(-18 640 130)" fill="#2D4A33" opacity="0.4" />
+
+  <!-- Woody trunk -->
+  <path d="M160 0C172 190 185 390 165 600H340C325 395 338 190 355 0H160Z" fill="url(#trunk7)" />
+  <path d="M225 0C234 210 240 400 228 600" stroke="#241810" stroke-width="4" opacity="0.6" />
+
+  <!-- Dry woody peduncle -->
+  <path d="M306 168C354 156 410 156 452 178" stroke="#3D2C22" stroke-width="10" stroke-linecap="round" />
+
+  <!-- Shrunken, hard, petrified blackened mummy pod -->
+  <path
+    d="M454 176C416 184 388 242 396 312C402 362 394 402 414 446C428 478 448 504 470 508C496 504 516 472 526 436C542 384 532 332 534 294C538 230 502 174 454 176Z"
+    fill="url(#mummyBody)"
+    stroke="#0B0807"
+    stroke-width="2"
+  />
+
+  <!-- Deep shriveled mummy wrinkles & crevices -->
+  <path d="M460 186C452 276 468 394 470 498" stroke="#0F0A08" stroke-width="5" stroke-linecap="round" />
+  <path d="M426 206C414 278 424 386 446 478" stroke="#0F0A08" stroke-width="4" stroke-linecap="round" />
+  <path d="M498 206C512 278 504 386 488 478" stroke="#574740" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+  <!-- Residual pale crusty spore patches on dry skin -->
+  <ellipse cx="446" cy="316" rx="22" ry="15" transform="rotate(-12 446 316)" fill="#9CA3AF" opacity="0.28" />
+  <ellipse cx="486" cy="378" rx="18" ry="12" transform="rotate(14 486 378)" fill="#A8A29E" opacity="0.24" />
+</svg>

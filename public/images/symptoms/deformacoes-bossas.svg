@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#193A21" />
+      <stop offset="100%" stop-color="#0E2213" />
+    </linearGradient>
+    <linearGradient id="bilroBody" x1="310" y1="120" x2="500" y2="490" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#76BC43" />
+      <stop offset="55%" stop-color="#4A8A2A" />
+      <stop offset="100%" stop-color="#2A5218" />
+    </linearGradient>
+    <radialGradient id="gibaHighlight" cx="0.35" cy="0.35" r="0.6">
+      <stop offset="0%" stop-color="#D9F99D" stop-opacity="0.85" />
+      <stop offset="55%" stop-color="#84CC16" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#4D7C0F" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg3)" />
+  <ellipse cx="640" cy="140" rx="160" ry="60" transform="rotate(-24 640 140)" fill="#2F6B3C" opacity="0.4" />
+  <ellipse cx="160" cy="460" rx="170" ry="65" transform="rotate(18 160 460)" fill="#295932" opacity="0.45" />
+
+  <!-- Branch -->
+  <path d="M180 76C340 94 490 96 660 66" stroke="#4A3425" stroke-width="24" stroke-linecap="round" />
+  <path d="M402 88L400 148" stroke="#4E732F" stroke-width="10" stroke-linecap="round" />
+
+  <!-- Deformed young pod (bilro) with asymmetric swellings / bossas / gibas -->
+  <path
+    d="M400 142C342 146 306 196 312 248C316 276 286 306 294 344C302 384 334 398 342 428C350 464 374 496 408 504C444 494 468 462 478 424C488 386 522 364 522 322C522 284 488 268 486 242C484 192 452 144 400 142Z"
+    fill="url(#bilroBody)"
+  />
+
+  <!-- Glossy swellings (gibas/bossas) -->
+  <ellipse cx="336" cy="336" rx="40" ry="34" fill="url(#gibaHighlight)" />
+  <ellipse cx="476" cy="316" rx="38" ry="32" fill="url(#gibaHighlight)" />
+  <ellipse cx="408" cy="226" rx="36" ry="28" fill="url(#gibaHighlight)" />
+
+  <!-- Ridges distorted by swellings -->
+  <path d="M400 148C392 240 412 370 408 498" stroke="#254715" stroke-width="4.5" opacity="0.55" />
+  <path d="M352 162C334 235 322 340 368 474" stroke="#254715" stroke-width="3.5" opacity="0.45" />
+  <path d="M448 162C466 230 492 330 448 474" stroke="#254715" stroke-width="3.5" opacity="0.4" />
+
+  <!-- Subtle glossy specular arcs on swellings -->
+  <path d="M315 322C322 310 338 308 348 316" stroke="#ECFCCB" stroke-width="4" stroke-linecap="round" opacity="0.65" />
+  <path d="M460 300C470 292 486 294 494 305" stroke="#ECFCCB" stroke-width="4" stroke-linecap="round" opacity="0.65" />
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg8" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#193A21" />
+      <stop offset="100%" stop-color="#0E2113" />
+    </linearGradient>
+    <linearGradient id="podHealthyTop" x1="290" y1="120" x2="510" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#84CC16" />
+      <stop offset="100%" stop-color="#4D7C0F" />
+    </linearGradient>
+    <linearGradient id="blackPodUniform" x1="290" y1="260" x2="520" y2="530" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6A381F" />
+      <stop offset="35%" stop-color="#4B2513" />
+      <stop offset="100%" stop-color="#281208" />
+    </linearGradient>
+    <clipPath id="podClip8">
+      <path d="M400 124C320 128 272 222 280 342C288 448 338 522 400 534C462 522 514 446 520 338C526 220 480 128 400 124Z" />
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg8)" />
+  <ellipse cx="660" cy="140" rx="165" ry="60" transform="rotate(-16 660 140)" fill="#2F6638" opacity="0.4" />
+
+  <!-- Branch -->
+  <path d="M180 62C340 82 500 84 650 62" stroke="#473123" stroke-width="24" stroke-linecap="round" />
+  <path d="M400 80V130" stroke="#536E2C" stroke-width="11" stroke-linecap="round" />
+
+  <!-- Pod with Phytophthora uniform advance from tip upward with crisp margin -->
+  <g clip-path="url(#podClip8)">
+    <rect x="250" y="110" width="300" height="440" fill="url(#podHealthyTop)" />
+    <!-- Crisp advancing wave from bottom tip -->
+    <path d="M250 284C320 268 470 268 550 292V560H250V284Z" fill="url(#blackPodUniform)" />
+    <!-- Fine sparse whitish mycelium edge near margin -->
+    <path d="M270 318C340 304 460 304 530 324" stroke="#E2E8F0" stroke-width="5" stroke-dasharray="4 10" opacity="0.38" />
+  </g>
+
+  <!-- Longitudinal ridges -->
+  <path d="M400 130C396 254 398 408 400 528" stroke="#1F120A" stroke-width="4" opacity="0.5" />
+  <path d="M342 150C314 250 318 400 356 508" stroke="#1F120A" stroke-width="3.5" opacity="0.4" />
+  <path d="M458 150C486 250 482 400 444 508" stroke="#1F120A" stroke-width="3.5" opacity="0.4" />
+</svg>

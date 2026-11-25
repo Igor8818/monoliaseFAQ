@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg9" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E3B23" />
+      <stop offset="100%" stop-color="#0F2113" />
+    </linearGradient>
+    <linearGradient id="witchesPod" x1="470" y1="290" x2="620" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#84CC16" />
+      <stop offset="60%" stop-color="#4D7C0F" />
+      <stop offset="100%" stop-color="#3F2B1D" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg9)" />
+
+  <!-- Main cacao branch -->
+  <path d="M90 190C240 165 440 175 680 140" stroke="#4D3526" stroke-width="24" stroke-linecap="round" />
+
+  <!-- Hypertrophied dry vegetative broom cluster ("Vassoura-de-bruxa") on the left -->
+  <g stroke-linecap="round">
+    <path d="M275 170C275 210 265 245 255 270" stroke="#6B4834" stroke-width="18" />
+    <path d="M262 246C220 296 178 355 150 420" stroke="#5A3A28" stroke-width="9" />
+    <path d="M262 246C245 316 226 392 212 464" stroke="#6B442E" stroke-width="8" />
+    <path d="M262 246C276 320 278 398 272 478" stroke="#523523" stroke-width="9" />
+    <path d="M262 246C308 310 335 385 344 452" stroke="#684531" stroke-width="8" />
+    <path d="M262 246C335 288 378 345 396 406" stroke="#5B3B28" stroke-width="7" />
+  </g>
+  <!-- Dry curled dead leaves on the broom -->
+  <ellipse cx="176" cy="368" rx="34" ry="14" transform="rotate(-48 176 368)" fill="#784C30" />
+  <ellipse cx="222" cy="412" rx="36" ry="15" transform="rotate(-76 222 412)" fill="#6B4229" />
+  <ellipse cx="278" cy="422" rx="36" ry="14" transform="rotate(-92 278 422)" fill="#5C3722" />
+  <ellipse cx="332" cy="396" rx="34" ry="14" transform="rotate(-118 332 396)" fill="#7A4F33" />
+
+  <!-- Small stunted carrot/strawberry-like deformed pod on the right -->
+  <path d="M540 162V232" stroke="#4D6E2A" stroke-width="9" stroke-linecap="round" />
+  <path
+    d="M540 226C488 228 466 286 488 344C504 388 524 448 544 472C564 448 584 388 598 344C616 286 592 228 540 226Z"
+    fill="url(#witchesPod)"
+  />
+  <path d="M540 232V464" stroke="#2D4A16" stroke-width="3.5" opacity="0.5" />
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E3D21" />
+      <stop offset="100%" stop-color="#102514" />
+    </linearGradient>
+    <linearGradient id="youngGreen" x1="250" y1="120" x2="450" y2="490" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6DB33F" />
+      <stop offset="55%" stop-color="#4A8B2C" />
+      <stop offset="100%" stop-color="#2D5A1B" />
+    </linearGradient>
+    <linearGradient id="youngRight" x1="480" y1="160" x2="640" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#79BD47" />
+      <stop offset="100%" stop-color="#32641E" />
+    </linearGradient>
+    <radialGradient id="atypicalYellow1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FACC15" stop-opacity="0.95" />
+      <stop offset="65%" stop-color="#EAB308" stop-opacity="0.78" />
+      <stop offset="100%" stop-color="#65A30D" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="atypicalRust" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#B45309" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#CA8A04" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg2)" />
+  <ellipse cx="140" cy="120" rx="180" ry="70" transform="rotate(24 140 120)" fill="#356D39" opacity="0.45" />
+  <ellipse cx="670" cy="480" rx="200" ry="80" transform="rotate(-16 670 480)" fill="#2D5F32" opacity="0.45" />
+
+  <!-- Overhead cacao branch -->
+  <path d="M120 88C310 72 520 76 700 105" stroke="#4D3627" stroke-width="26" stroke-linecap="round" />
+  <path d="M120 84C310 68 520 72 700 101" stroke="#6E513E" stroke-width="8" stroke-linecap="round" opacity="0.5" />
+
+  <!-- Left young pod with atypical yellow patches -->
+  <path d="M312 78L318 142" stroke="#486B2B" stroke-width="9" stroke-linecap="round" />
+  <path d="M318 136C256 142 216 218 224 316C232 406 274 472 324 484C374 472 414 404 418 312C422 218 380 140 318 136Z" fill="url(#youngGreen)" />
+  <!-- Irregular early discoloration patches -->
+  <ellipse cx="292" cy="295" rx="64" ry="76" transform="rotate(-14 292 295)" fill="url(#atypicalYellow1)" />
+  <ellipse cx="354" cy="360" rx="48" ry="52" transform="rotate(16 354 360)" fill="url(#atypicalYellow1)" />
+  <ellipse cx="296" cy="306" rx="26" ry="30" fill="url(#atypicalRust)" />
+  <!-- Pod ridges -->
+  <path d="M320 142C316 245 318 375 324 478" stroke="#284D18" stroke-width="4" opacity="0.55" />
+  <path d="M272 158C248 242 252 365 288 462" stroke="#284D18" stroke-width="3.5" opacity="0.45" />
+  <path d="M366 158C388 242 384 365 354 462" stroke="#9BE066" stroke-width="3" opacity="0.35" />
+
+  <!-- Right young pod -->
+  <path d="M554 88L548 164" stroke="#486B2B" stroke-width="8" stroke-linecap="round" />
+  <path d="M548 158C496 164 466 232 472 316C478 394 514 452 554 462C596 452 630 392 634 314C638 232 602 162 548 158Z" fill="url(#youngRight)" />
+  <ellipse cx="526" cy="242" rx="46" ry="54" transform="rotate(10 526 242)" fill="url(#atypicalYellow1)" />
+  <ellipse cx="576" cy="348" rx="38" ry="42" fill="url(#atypicalYellow1)" />
+  <path d="M550 164C546 258 548 372 554 456" stroke="#2A5119" stroke-width="3.5" opacity="0.55" />
+  <path d="M508 178C490 258 494 362 522 444" stroke="#2A5119" stroke-width="3" opacity="0.4" />
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#193620" />
+      <stop offset="100%" stop-color="#0E1E12" />
+    </linearGradient>
+    <linearGradient id="podGreenMid" x1="270" y1="120" x2="520" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7CB342" />
+      <stop offset="55%" stop-color="#558B2F" />
+      <stop offset="100%" stop-color="#2E541B" />
+    </linearGradient>
+    <radialGradient id="brownLesion" cx="0.45" cy="0.45" r="0.55">
+      <stop offset="0%" stop-color="#3E2114" />
+      <stop offset="65%" stop-color="#5D331E" />
+      <stop offset="92%" stop-color="#78462A" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#8A5A2B" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg4)" />
+  <ellipse cx="140" cy="480" rx="170" ry="65" transform="rotate(-18 140 480)" fill="#2B5B33" opacity="0.4" />
+  <ellipse cx="670" cy="130" rx="165" ry="60" transform="rotate(20 670 130)" fill="#2F6638" opacity="0.4" />
+
+  <!-- Branch & stem -->
+  <path d="M160 66C360 88 520 82 670 60" stroke="#473123" stroke-width="24" stroke-linecap="round" />
+  <path d="M402 84V136" stroke="#536E2C" stroke-width="11" stroke-linecap="round" />
+
+  <!-- Large cacao pod -->
+  <path d="M402 130C318 134 268 228 276 346C284 452 338 524 402 536C468 524 522 450 528 342C534 226 486 134 402 130Z" fill="url(#podGreenMid)" />
+
+  <!-- Coalescing irregular chocolate-brown lesions -->
+  <path d="M312 246C346 218 418 224 446 266C472 306 496 340 472 394C446 446 378 468 334 434C294 402 284 274 312 246Z" fill="url(#brownLesion)" />
+  <ellipse cx="448" cy="238" rx="46" ry="38" transform="rotate(-20 448 238)" fill="url(#brownLesion)" />
+  <ellipse cx="364" cy="442" rx="52" ry="36" transform="rotate(14 364 442)" fill="url(#brownLesion)" />
+
+  <!-- Pod grooves -->
+  <path d="M402 136C398 258 400 410 402 528" stroke="#24150D" stroke-width="4.5" opacity="0.55" />
+  <path d="M342 154C312 252 316 402 356 508" stroke="#24150D" stroke-width="4" opacity="0.45" />
+  <path d="M462 154C490 252 486 402 448 508" stroke="#24150D" stroke-width="3.5" opacity="0.4" />
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#223724" />
+      <stop offset="100%" stop-color="#132116" />
+    </linearGradient>
+    <linearGradient id="outerHusk" x1="160" y1="150" x2="640" y2="470" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7FB842" />
+      <stop offset="100%" stop-color="#4A7729" />
+    </linearGradient>
+    <linearGradient id="cutWall" x1="180" y1="170" x2="620" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D6C69C" />
+      <stop offset="100%" stop-color="#A69062" />
+    </linearGradient>
+    <radialGradient id="rottenPulp" cx="0.5" cy="0.5" r="0.55">
+      <stop offset="0%" stop-color="#2B160D" />
+      <stop offset="65%" stop-color="#4A2717" />
+      <stop offset="100%" stop-color="#6B3E25" />
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg5)" />
+
+  <!-- Wooden field table hint -->
+  <rect x="0" y="380" width="800" height="220" fill="#2B1E17" opacity="0.65" />
+
+  <!-- Halved cacao pod longitudinal section -->
+  <path d="M134 300C138 202 248 134 400 134C552 134 662 202 666 300C662 398 552 466 400 466C248 466 138 398 134 300Z" fill="url(#outerHusk)" />
+  <path d="M158 300C162 216 260 156 400 156C540 156 638 216 642 300C638 384 540 444 400 444C260 444 162 384 158 300Z" fill="url(#cutWall)" />
+
+  <!-- Inner decayed cavity -->
+  <path d="M196 300C202 238 282 192 400 192C518 192 598 238 604 300C598 362 518 408 400 408C282 408 202 362 196 300Z" fill="url(#rottenPulp)" />
+
+  <!-- Necrotic clumped beans inside watery dark pulp -->
+  <g fill="#5C3623" stroke="#22110A" stroke-width="2.5">
+    <ellipse cx="265" cy="278" rx="34" ry="21" transform="rotate(-12 265 278)" />
+    <ellipse cx="326" cy="262" rx="36" ry="22" transform="rotate(8 326 262)" />
+    <ellipse cx="395" cy="258" rx="36" ry="22" transform="rotate(-5 395 258)" />
+    <ellipse cx="465" cy="266" rx="35" ry="21" transform="rotate(14 465 266)" />
+    <ellipse cx="526" cy="285" rx="32" ry="19" transform="rotate(20 526 285)" />
+    <ellipse cx="282" cy="332" rx="34" ry="21" transform="rotate(10 282 332)" />
+    <ellipse cx="348" cy="340" rx="36" ry="22" transform="rotate(-8 348 340)" />
+    <ellipse cx="418" cy="342" rx="36" ry="22" transform="rotate(6 418 342)" />
+    <ellipse cx="486" cy="330" rx="34" ry="20" transform="rotate(-14 486 330)" />
+  </g>
+
+  <!-- Central placenta strand darkened -->
+  <path d="M220 300C330 294 470 306 580 300" stroke="#1E0E07" stroke-width="6" stroke-linecap="round" opacity="0.85" />
+  <!-- Watery sheen on spoiled pulp -->
+  <ellipse cx="350" cy="296" rx="44" ry="12" fill="#E2E8F0" opacity="0.16" />
+  <ellipse cx="470" cy="306" rx="36" ry="10" fill="#E2E8F0" opacity="0.14" />
+</svg>

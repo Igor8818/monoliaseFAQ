@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#17331E" />
+      <stop offset="55%" stop-color="#224A2C" />
+      <stop offset="100%" stop-color="#0E2414" />
+    </linearGradient>
+    <radialGradient id="sunlight" cx="0.72" cy="0.22" r="0.65">
+      <stop offset="0%" stop-color="#9BE38B" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#17331E" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="trunk" x1="120" y1="0" x2="360" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3A281E" />
+      <stop offset="45%" stop-color="#5B4030" />
+      <stop offset="100%" stop-color="#2B1C14" />
+    </linearGradient>
+    <linearGradient id="podMain" x1="330" y1="150" x2="520" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8C3845" />
+      <stop offset="45%" stop-color="#6B2834" />
+      <stop offset="100%" stop-color="#3E171E" />
+    </linearGradient>
+    <linearGradient id="podBack" x1="470" y1="80" x2="620" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A87872" />
+      <stop offset="60%" stop-color="#7D544E" />
+      <stop offset="100%" stop-color="#4A2F2B" />
+    </linearGradient>
+    <radialGradient id="waterySpot1" cx="0.4" cy="0.4" r="0.6">
+      <stop offset="0%" stop-color="#2A1610" stop-opacity="0.92" />
+      <stop offset="65%" stop-color="#3B251B" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#5C3B28" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="wetGloss" cx="0.35" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="#E5F6FF" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#E5F6FF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)" />
+  <rect width="800" height="600" fill="url(#sunlight)" />
+
+  <!-- Soft cabruca background leaves -->
+  <ellipse cx="660" cy="110" rx="170" ry="65" transform="rotate(-18 660 110)" fill="#2F6A3C" opacity="0.45" />
+  <ellipse cx="690" cy="450" rx="190" ry="75" transform="rotate(22 690 450)" fill="#1E4D29" opacity="0.55" />
+  <ellipse cx="95" cy="140" rx="140" ry="50" transform="rotate(28 95 140)" fill="#2E6339" opacity="0.4" />
+
+  <!-- Cacao Trunk -->
+  <path d="M120 0C138 180 156 390 132 600H330C315 395 330 185 348 0H120Z" fill="url(#trunk)" />
+  <path d="M180 0C190 195 202 410 185 600" stroke="#2D1D14" stroke-width="4" opacity="0.5" />
+  <path d="M258 0C252 210 264 415 248 600" stroke="#755543" stroke-width="3" opacity="0.35" />
+
+  <!-- Secondary pod in upper right -->
+  <path d="M510 58C525 85 538 112 544 134" stroke="#4D3527" stroke-width="8" stroke-linecap="round" />
+  <path d="M548 128C495 130 462 195 466 268C470 338 510 386 552 394C594 386 632 336 636 266C640 195 602 130 548 128Z" fill="url(#podBack)" />
+  <path d="M550 134C548 215 550 315 552 388" stroke="#4F302B" stroke-width="4" opacity="0.5" />
+  <path d="M512 148C486 210 488 310 524 378" stroke="#4F302B" stroke-width="3.5" opacity="0.4" />
+  <path d="M588 148C612 210 610 310 578 378" stroke="#B78D86" stroke-width="3" opacity="0.35" />
+
+  <!-- Foreground primary pod attached to trunk -->
+  <path d="M292 178C335 170 368 175 392 192" stroke="#4E3526" stroke-width="11" stroke-linecap="round" />
+  <path d="M398 184C334 188 294 265 302 362C310 452 356 516 408 526C462 516 508 450 512 356C516 262 468 186 398 184Z" fill="url(#podMain)" />
+
+  <!-- Pod longitudinal ridges and highlights -->
+  <path d="M402 190C398 295 400 420 408 520" stroke="#361219" stroke-width="5" opacity="0.55" />
+  <path d="M352 204C328 290 332 415 372 504" stroke="#361219" stroke-width="4" opacity="0.45" />
+  <path d="M452 202C478 290 476 410 442 504" stroke="#A65564" stroke-width="3.5" opacity="0.4" />
+  <ellipse cx="366" cy="260" rx="22" ry="52" transform="rotate(-10 366 260)" fill="#B86B78" opacity="0.22" />
+
+  <!-- Watery dark translucent spots (Manchas Aquosas) -->
+  <ellipse cx="425" cy="340" rx="46" ry="34" transform="rotate(14 425 340)" fill="url(#waterySpot1)" />
+  <ellipse cx="417" cy="332" rx="18" ry="12" transform="rotate(14 417 332)" fill="url(#wetGloss)" />
+  <ellipse cx="358" cy="396" rx="34" ry="26" transform="rotate(-18 358 396)" fill="url(#waterySpot1)" />
+  <ellipse cx="352" cy="390" rx="13" ry="9" transform="rotate(-18 352 390)" fill="url(#wetGloss)" />
+  <ellipse cx="445" cy="422" rx="26" ry="20" transform="rotate(8 445 422)" fill="url(#waterySpot1)" />
+  <ellipse cx="440" cy="417" rx="10" ry="7" fill="url(#wetGloss)" />
+
+  <!-- Water droplets on lesions -->
+  <circle cx="436" cy="354" r="4.5" fill="#E0F2FE" opacity="0.72" />
+  <circle cx="367" cy="407" r="3.5" fill="#E0F2FE" opacity="0.68" />
+</svg>
