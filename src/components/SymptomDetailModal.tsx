@@ -70,9 +70,9 @@ export function SymptomDetailModal({ symptom, onClose }: SymptomDetailModalProps
       aria-modal="true"
       aria-label={symptom.title}
     >
-      <div className="w-full sm:max-w-xl bg-parchment rounded-t-3xl sm:rounded-3xl border border-borderSoft shadow-2xl overflow-hidden max-h-[92vh] flex flex-col animate-fade-in-up">
+      <div className="w-full sm:max-w-xl bg-parchment rounded-t-3xl sm:rounded-3xl border border-borderSoft shadow-2xl overflow-hidden max-h-[88vh] sm:max-h-[84vh] flex flex-col animate-fade-in-up">
         {/* Header */}
-        <div className="bg-forest-primary text-white px-5 py-4 flex items-center justify-between gap-3">
+        <div className="bg-forest-primary text-white px-5 py-4 flex items-center justify-between gap-3 shrink-0">
           <div className="min-w-0">
             <span
               className={`inline-block text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${stageBadgeClass}`}
@@ -108,7 +108,7 @@ export function SymptomDetailModal({ symptom, onClose }: SymptomDetailModalProps
         </div>
 
         {/* Body */}
-        <div className="overflow-y-auto p-4 sm:p-5 space-y-4">
+        <div className="overflow-y-auto min-h-0 flex-1 p-4 sm:p-5 space-y-4">
           {/* Interactive Zoomable Visual Plate */}
           <div className="bg-white rounded-2xl border border-borderSoft overflow-hidden shadow-card">
             <div

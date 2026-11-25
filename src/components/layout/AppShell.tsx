@@ -178,7 +178,7 @@ export function AppShell({
 
       {/* Main Content Area */}
       <div className="flex-1 md:pl-72 lg:pl-80 flex flex-col min-h-screen">
-        <div className="flex-1 w-full max-w-4xl mx-auto pb-24 md:pb-10">
+        <div className="flex-1 w-full max-w-4xl mx-auto md:px-6 md:pt-5 pb-24 md:pb-10">
           {children}
         </div>
       </div>

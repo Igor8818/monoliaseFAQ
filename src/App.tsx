@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { DilutionCalculatorModal } from './components/DilutionCalculatorModal';
 import { GlobalSearchModal } from './components/GlobalSearchModal';
+import { OfficialContactsModal } from './components/OfficialContactsModal';
 import { AppShell } from './components/layout/AppShell';
 import { AppStateProvider, useAppState } from './context/AppStateContext';
 import { AboutDiseaseScreen } from './screens/AboutDiseaseScreen';
@@ -10,6 +11,7 @@ import { FavoritesScreen } from './screens/FavoritesScreen';
 import { HomeScreen } from './screens/HomeScreen';
 import { PreventScreen } from './screens/PreventScreen';
 import { RecognizeScreen } from './screens/RecognizeScreen';
+import { SuspectWizardScreen } from './screens/SuspectWizardScreen';
 import { WelcomeScreen } from './screens/WelcomeScreen';
 import type { AppRoute, SearchResultItem } from './types/guide';
 
@@ -154,20 +156,10 @@ function AppContent() {
         )}
 
         {route === 'suspect' && (
-          <div className="p-6">
-            <button
-              type="button"
-              onClick={() => navigate('home')}
-              className="text-sm font-bold text-forest-primary mb-4"
-            >
-              ← Voltar ao Início
-            </button>
-            <div className="bg-white rounded-2xl border border-borderSoft p-6 shadow-card">
-              <p className="font-bold text-slate-900">
-                Wizard Fruto Suspeito (1/6–6/6) — próximo passo
-              </p>
-            </div>
-          </div>
+          <SuspectWizardScreen
+            onBack={() => navigate('home')}
+            onOpenFullContacts={() => setContactsOpen(true)}
+          />
         )}
       </AppShell>
 
@@ -182,20 +174,10 @@ function AppContent() {
         onClose={() => setCalculatorOpen(false)}
       />
 
-      {contactsOpen && (
-        <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl p-6 max-w-md w-full space-y-3">
-            <p className="font-bold text-slate-900">Contatos Oficiais (Etapa 6)</p>
-            <button
-              type="button"
-              onClick={() => setContactsOpen(false)}
-              className="px-4 py-2 rounded-xl bg-forest-primary text-white text-sm font-semibold"
-            >
-              Fechar
-            </button>
-          </div>
-        </div>
-      )}
+      <OfficialContactsModal
+        open={contactsOpen}
+        onClose={() => setContactsOpen(false)}
+      />
     </>
   );
 }

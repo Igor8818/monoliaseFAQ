@@ -49,8 +49,8 @@ export function DilutionCalculatorModal({ open, onClose }: DilutionCalculatorMod
       aria-modal="true"
       aria-label="Calculadora de solução desinfetante"
     >
-      <div className="w-full sm:max-w-lg bg-parchment rounded-t-3xl sm:rounded-3xl border border-borderSoft shadow-2xl overflow-hidden max-h-[92vh] flex flex-col animate-fade-in-up">
-        <div className="bg-forest-primary text-white px-5 py-4 flex items-center justify-between gap-3">
+      <div className="w-full sm:max-w-lg bg-parchment rounded-t-3xl sm:rounded-3xl border border-borderSoft shadow-2xl overflow-hidden max-h-[88vh] sm:max-h-[85vh] flex flex-col animate-fade-in-up">
+        <div className="bg-forest-primary text-white px-5 py-4 flex items-center justify-between gap-3 shrink-0">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center">
               <Calculator className="w-5 h-5" />
@@ -172,7 +172,7 @@ export function DilutionCalculatorModal({ open, onClose }: DilutionCalculatorMod
                 <span className="text-xs uppercase tracking-wider font-bold text-emerald-200">
                   Medida recomendada
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full bg-white/15 text-xs font-bold">
+                <span className="px-2.5 py-0.5 rounded-full bg-white/15 text-xs font-bold whitespace-nowrap shrink-0">
                   Contato mín.: {result.contactMinutes} min
                 </span>
               </div>
@@ -180,10 +180,10 @@ export function DilutionCalculatorModal({ open, onClose }: DilutionCalculatorMod
               <div className="grid grid-cols-2 gap-3">
                 <div className="rounded-2xl bg-white/10 p-3.5">
                   <p className="text-xs text-emerald-100/85">Água sanitária</p>
-                  <p className="text-2xl sm:text-3xl font-extrabold text-fitomolGold tabular-nums mt-0.5">
+                  <p className="text-2xl sm:text-3xl font-extrabold text-fitomolGold tabular-nums mt-0.5 whitespace-nowrap">
                     {result.bleachMl} mL
                   </p>
-                  <p className="text-xs text-emerald-100 mt-1 tabular-nums">
+                  <p className="text-xs text-emerald-100 mt-1 tabular-nums whitespace-nowrap">
                     ≈ {result.cups200ml} copo{result.cups200ml === 1 ? '' : 's'} de 200 mL
                   </p>
                 </div>

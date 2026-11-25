@@ -46,7 +46,7 @@ export function RecognizeScreen({ onBack, initialSymptomId }: RecognizeScreenPro
   return (
     <div className="animate-fade-in-up">
       {/* Sticky Green Sub-Header with Smooth Pill Tabs (no ugly scrollbar!) */}
-      <header className="bg-forest-primary text-white sticky top-0 z-20 shadow-sm">
+      <header className="bg-forest-primary text-white sticky top-0 z-20 shadow-sm md:rounded-3xl md:static">
         <div className="px-4 sm:px-6 pt-4 pb-3 flex items-center gap-3">
           <button
             type="button"
@@ -67,7 +67,7 @@ export function RecognizeScreen({ onBack, initialSymptomId }: RecognizeScreenPro
         </div>
 
         <div className="px-4 sm:px-6 pb-3.5 overflow-x-auto no-scrollbar">
-          <div className="inline-flex items-center gap-2 min-w-full sm:min-w-0">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 pr-4">
             {SUB_TABS.map((tab) => {
               const active = activeTab === tab.id;
               return (
@@ -75,7 +75,7 @@ export function RecognizeScreen({ onBack, initialSymptomId }: RecognizeScreenPro
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap transition-all shrink-0 ${
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap transition-all shrink-0 ${
                     active
                       ? 'bg-white text-forest-deep shadow-sm'
                       : 'bg-white/15 text-emerald-50 hover:bg-white/25'

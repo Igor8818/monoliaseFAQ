@@ -63,7 +63,7 @@ export function GlobalSearchModal({
             <Search className="w-5 h-5 text-slate-400 absolute left-3.5 pointer-events-none" />
             <input
               ref={inputRef}
-              type="search"
+              type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Buscar sintomas, dicas, medidas..."

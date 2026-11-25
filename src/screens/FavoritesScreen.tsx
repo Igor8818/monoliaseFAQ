@@ -15,7 +15,12 @@ interface FavoritesScreenProps {
 
 export function FavoritesScreen({ onBack, onNavigate }: FavoritesScreenProps) {
   const { favorites, toggleFavorite } = useAppState();
-  const [activeTab, setActiveTab] = useState<FavoriteCategory>('sintomas');
+  const [activeTab, setActiveTab] = useState<FavoriteCategory>(() => {
+    if (favorites.sintomas.length > 0) return 'sintomas';
+    if (favorites.biosseguranca.length > 0) return 'biosseguranca';
+    if (favorites.faq.length > 0) return 'faq';
+    return 'sintomas';
+  });
   const [selectedSymptom, setSelectedSymptom] = useState<SymptomItem | null>(null);
   const [selectedBio, setSelectedBio] = useState<BiosecurityCategory | null>(null);
 
@@ -41,7 +46,7 @@ export function FavoritesScreen({ onBack, onNavigate }: FavoritesScreenProps) {
 
   return (
     <div className="animate-fade-in-up">
-      <header className="bg-forest-primary text-white sticky top-0 z-20 shadow-sm">
+      <header className="bg-forest-primary text-white sticky top-0 z-20 shadow-sm md:rounded-3xl md:static">
         <div className="px-4 sm:px-6 pt-4 pb-3 flex items-center gap-3">
           <button
             type="button"

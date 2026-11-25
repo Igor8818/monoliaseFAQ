@@ -64,7 +64,7 @@ export function FaqScreen({ onBack, initialOpenFaqId }: FaqScreenProps) {
 
   return (
     <div className="animate-fade-in-up">
-      <header className="bg-forest-primary text-white sticky top-0 z-20 shadow-sm">
+      <header className="bg-forest-primary text-white sticky top-0 z-20 shadow-sm md:rounded-3xl md:static">
         <div className="px-4 sm:px-6 pt-4 pb-3 flex items-center gap-3">
           <button
             type="button"
@@ -89,7 +89,7 @@ export function FaqScreen({ onBack, initialOpenFaqId }: FaqScreenProps) {
           <div className="relative flex items-center">
             <Search className="w-4 h-4 text-slate-400 absolute left-3.5 pointer-events-none" />
             <input
-              type="search"
+              type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Filtrar perguntas..."
@@ -108,7 +108,7 @@ export function FaqScreen({ onBack, initialOpenFaqId }: FaqScreenProps) {
           </div>
 
           <div className="overflow-x-auto no-scrollbar">
-            <div className="inline-flex items-center gap-2">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 pr-6">
               {FAQ_CATEGORIES.map((cat) => {
                 const active = selectedCategory === cat;
                 return (

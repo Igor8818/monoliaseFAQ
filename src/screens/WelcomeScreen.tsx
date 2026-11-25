@@ -7,7 +7,7 @@ interface WelcomeScreenProps {
 
 export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-forest-primary via-forest-deep to-[#0A2E19] text-white flex flex-col items-center justify-between px-6 py-10 safe-top safe-bottom">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-forest-primary via-forest-deep to-[#0A2E19] text-white flex flex-col items-center justify-between gap-6 px-6 pt-8 pb-12 safe-top safe-bottom">
       {/* Subtle botanical watermarks */}
       <BotanicalLeafWatermark className="w-80 h-80 text-white absolute -top-16 -right-16 pointer-events-none" />
       <BotanicalLeafWatermark className="w-72 h-72 text-white absolute -bottom-20 -left-20 rotate-180 pointer-events-none" />

@@ -43,14 +43,14 @@ export function HomeScreen({
   return (
     <div className="animate-fade-in-up">
       {/* Green Header matching prototype */}
-      <header className="bg-forest-primary text-white px-4 sm:px-6 pt-5 pb-6 rounded-b-[28px] md:rounded-none md:bg-transparent md:text-slate-900 md:pt-7 md:pb-3 shadow-sm md:shadow-none">
+      <header className="bg-forest-primary text-white px-4 sm:px-6 pt-5 pb-6 rounded-b-[28px] md:rounded-none md:bg-transparent md:text-slate-900 md:pt-2 md:pb-3 shadow-sm md:shadow-none">
         <div className="flex items-center justify-between gap-2 mb-4">
           <div className="min-w-0">
-            <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight truncate">
+            <h1 className="text-lg sm:text-2xl font-extrabold tracking-tight leading-tight">
               Monilíase em Alerta
             </h1>
-            <p className="text-xs text-emerald-100/90 md:text-slate-500 font-medium">
-              CEPLAC · FITOMOL · Guia de prevenção do cacaueiro
+            <p className="text-[11px] sm:text-xs text-emerald-100/90 md:text-slate-500 font-medium">
+              CEPLAC · FITOMOL · Guia do cacaueiro
             </p>
           </div>
 
@@ -71,9 +71,10 @@ export function HomeScreen({
               onClick={() => onNavigate('welcome')}
               title="Sobre o guia (tela inicial)"
               aria-label="Sobre o guia"
-              className="md:hidden w-10 h-10 rounded-xl bg-white/15 hover:bg-white/25 text-white flex items-center justify-center border border-white/15 transition-colors"
+              className="w-10 h-10 md:w-auto md:px-3 rounded-xl bg-white/15 hover:bg-white/25 md:bg-white md:hover:bg-forest-soft text-white md:text-slate-700 flex items-center justify-center gap-1.5 border border-white/15 md:border-borderSoft shadow-sm md:shadow-sm transition-colors"
             >
               <Info className="w-4 h-4" />
+              <span className="hidden md:inline text-sm font-semibold">Sobre</span>
             </button>
 
             <button
@@ -225,16 +226,16 @@ export function HomeScreen({
           <button
             type="button"
             onClick={onOpenCalculator}
-            className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-borderSoft shadow-card hover:border-forest-primary/40 transition-all text-left"
+            className="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3 p-3.5 rounded-2xl bg-white border border-borderSoft shadow-card hover:border-forest-primary/40 transition-all text-left"
           >
-            <div className="w-10 h-10 rounded-xl bg-forest-soft text-forest-primary flex items-center justify-center shrink-0">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-forest-soft text-forest-primary flex items-center justify-center shrink-0">
               <Calculator className="w-5 h-5" />
             </div>
             <div className="min-w-0">
-              <p className="text-xs sm:text-sm font-bold text-slate-900 truncate">
+              <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">
                 Calculadora Sanitária
               </p>
-              <p className="text-[11px] text-slate-500 truncate">
+              <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
                 Diluição p/ botas e caixas
               </p>
             </div>
@@ -243,16 +244,16 @@ export function HomeScreen({
           <button
             type="button"
             onClick={onOpenContacts}
-            className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-borderSoft shadow-card hover:border-forest-primary/40 transition-all text-left"
+            className="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3 p-3.5 rounded-2xl bg-white border border-borderSoft shadow-card hover:border-forest-primary/40 transition-all text-left"
           >
-            <div className="w-10 h-10 rounded-xl bg-warningAmberSoft text-amber-800 flex items-center justify-center shrink-0">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-warningAmberSoft text-amber-800 flex items-center justify-center shrink-0">
               <PhoneCall className="w-5 h-5" />
             </div>
             <div className="min-w-0">
-              <p className="text-xs sm:text-sm font-bold text-slate-900 truncate">
+              <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">
                 Contatos Oficiais
               </p>
-              <p className="text-[11px] text-slate-500 truncate">
+              <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
                 CEPLAC e Defesa por UF
               </p>
             </div>

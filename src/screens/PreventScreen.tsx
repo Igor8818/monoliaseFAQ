@@ -39,7 +39,7 @@ export function PreventScreen({ onBack, onOpenCalculator }: PreventScreenProps) 
 
   return (
     <div className="animate-fade-in-up">
-      <header className="bg-forest-primary text-white sticky top-0 z-20 px-4 sm:px-6 py-4 flex items-center justify-between gap-3 shadow-sm">
+      <header className="bg-forest-primary text-white sticky top-0 z-20 px-4 sm:px-6 py-4 flex items-center justify-between gap-3 shadow-sm md:rounded-3xl md:static">
         <div className="flex items-center gap-3">
           <button
             type="button"
@@ -50,10 +50,10 @@ export function PreventScreen({ onBack, onOpenCalculator }: PreventScreenProps) 
             <ArrowLeft className="w-5 h-5" />
           </button>
           <div>
-            <h1 className="text-lg sm:text-xl font-extrabold tracking-tight">
+            <h1 className="text-lg sm:text-xl font-extrabold tracking-tight leading-tight">
               Como Prevenir
             </h1>
-            <p className="text-xs text-emerald-100/85">
+            <p className="text-xs text-emerald-100/85 mt-0.5">
               Marque as práticas já aplicadas na propriedade
             </p>
           </div>
@@ -124,13 +124,13 @@ export function PreventScreen({ onBack, onOpenCalculator }: PreventScreenProps) 
                       onClick={() => togglePreventionCheck(item.id)}
                       aria-label={`Marcar prática: ${item.text}`}
                       aria-pressed={checked}
-                      className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 mt-0.5 border transition-all ${
+                      className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 mt-0.5 border-2 transition-all ${
                         checked
                           ? 'bg-forest-primary border-forest-primary text-white shadow-sm'
-                          : 'bg-forest-soft border-forest-primary/25 text-forest-primary hover:bg-forest-soft/70'
+                          : 'bg-white border-slate-300 text-transparent hover:border-forest-primary/60'
                       }`}
                     >
-                      <Check className="w-4 h-4" strokeWidth={2.8} />
+                      <Check className="w-4 h-4" strokeWidth={3} />
                     </button>
 
                     <button

@@ -20,7 +20,7 @@ export function AboutDiseaseScreen({ onBack, onGoToRecognize }: AboutDiseaseScre
 
   return (
     <div className="animate-fade-in-up">
-      <header className="bg-forest-primary text-white sticky top-0 z-20 px-4 sm:px-6 py-4 flex items-center justify-between gap-3 shadow-sm">
+      <header className="bg-forest-primary text-white sticky top-0 z-20 px-4 sm:px-6 py-4 flex items-center justify-between gap-3 shadow-sm md:rounded-3xl md:static">
         <div className="flex items-center gap-3 min-w-0">
           <button
             type="button"
